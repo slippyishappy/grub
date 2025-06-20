@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusSpace - Productivity Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 min-h-screen">
+    
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">F</span>
+                    </div>
+                    <h1 class="text-xl font-semibold text-gray-900">FocusSpace</h1>
+                </div>
+                
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline font-medium">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline font-medium">Tasks</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline font-medium">Goals</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline font-medium">Calendar</a>
+                    
+                    
+                    <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                        <span class="text-gray-600 text-sm font-medium">H</span>
+                    </div>
+                </div>
+                
+                
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="pt-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <div class="flex-1 space-y-8">
+                    
+                    <section class="bg-white rounded-2xl shadow-sm p-8">
+                        <div class="text-center md:text-left">
+                            <h2 class="text-3xl font-semibold text-gray-900 mb-2">Good Morning, Hafsa 👋</h2>
+                            <p class="text-gray-600 mb-6">Ready to make today productive and meaningful?</p>
+                            <button class="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                                Start My Day
+                            </button>
+                        </div>
+                    </section>
+
+                    
+                    <section class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-gray-900">Tasks</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <div class="bg-white rounded-2xl shadow-sm p-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Today</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg">
+                                        <input type="checkbox" class="w-5 h-5 text-blue-600 rounded">
+                                        <div class="flex-1">
+                                            <p class="font-medium text-gray-900">Review project proposal</p>
+                                            <div class="flex items-center space-x-2 mt-1">
+                                                <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">High Priority</span>
+                                                <span class="text-xs text-gray-500">Due: 2:00 PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg">
+                                        <input type="checkbox" class="w-5 h-5 text-blue-600 rounded">
+                                        <div class="flex-1">
+                                            <p class="font-medium text-gray-900">Team standup meeting</p>
+                                            <div class="flex items-center space-x-2 mt-1">
+                                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Medium</span>
+                                                <span class="text-xs text-gray-500">Due: 10:00 AM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg">
+                                        <input type="checkbox" class="w-5 h-5 text-blue-600 rounded">
+                                        <div class="flex-1">
+                                            <p class="font-medium text-gray-900">Update documentation</p>
+                                            <div class="flex items-center space-x-2 mt-1">
+                                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Low</span>
+                                                <span class="text-xs text-gray-500">Due: End of day</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="bg-white rounded-2xl shadow-sm p-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Upcoming</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg">
+                                        <input type="checkbox" class="w-5 h-5 text-blue-600 rounded">
+                                        <div class="flex-1">
+                                            <p class="font-medium text-gray-900">Prepare presentation</p>
+                                            <div class="flex items-center space-x-2 mt-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Medium</span>
+                                                <span class="text-xs text-gray-500">Due: Tomorrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-3 p-3 hover:bg-gray-50 rounded-lg">
+                                        <input type="checkbox" class="w-5 h-5 text-blue-600 rounded">
+                                        <div class="flex-1">
+                                            <p class="font-medium text-gray-900">Client call follow-up</p>
+                                            <div class="flex items-center space-x-2 mt-1">
+                                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">High Priority</span>
+                                                <span class="text-xs text-gray-500">Due: Friday</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="bg-white rounded-2xl shadow-sm p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Daily Goals</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-900">📚 Read 20 pages</span>
+                                    <span class="text-sm text-gray-600">12/20</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 60%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500">60% complete</p>
+                            </div>
+                            
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-900">💪 Exercise 30 min</span>
+                                    <span class="text-sm text-gray-600">25/30</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 83%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500">83% complete</p>
+                            </div>
+                            
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-900">💧 Hydration: 2L</span>
+                                    <span class="text-sm text-gray-600">1.2/2L</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-3 rounded-full" style="width: 60%"></div>
+                                </div>
+                                <p class="text-xs text-gray-500">60% complete</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="bg-white rounded-2xl shadow-sm p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Pomodoro Timer</h3>
+                        
+                        <div class="flex flex-col items-center space-y-6">
+                            
+                            <div class="w-48 h-48 border-8 border-gray-200 rounded-full flex items-center justify-center relative">
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-gray-900">25:00</div>
+                                    <div class="text-sm text-gray-600 mt-1">Focus Time</div>
+                                </div>
+                                
+                                <div class="absolute inset-0 border-8 border-transparent border-t-blue-600 rounded-full transform rotate-0"></div>
+                            </div>
+                            
+                            
+                            <div class="flex items-center space-x-4">
+                                <button class="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                                    Start
+                                </button>
+                                <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-medium hover:bg-gray-300 transition-colors">
+                                    Break
+                                </button>
+                                <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-medium hover:bg-gray-300 transition-colors">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="bg-gradient-to-r from-neutral-100 to-gray-100 rounded-2xl shadow-sm p-8">
+                        <div class="text-center">
+                            <blockquote class="text-xl font-medium text-gray-900 mb-4">
+                                "Discipline is choosing between what you want now and what you want most."
+                            </blockquote>
+                            <cite class="text-gray-600">— Abraham Lincoln</cite>
+                        </div>
+                    </section>
+                </div>
+
+                
+                <aside class="hidden lg:block w-80 space-y-6">
+                    
+                    <div class="bg-white rounded-2xl shadow-sm p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h4>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                <span class="text-gray-700">Project Repository</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                                <span class="text-gray-700">Design System</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <div class="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                                <span class="text-gray-700">Team Slack</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl shadow-sm p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">This Week</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-2 bg-blue-50 rounded-lg">
+                                <span class="text-sm font-medium text-gray-900">Mon</span>
+                                <span class="text-xs text-blue-600">3 tasks</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                                <span class="text-sm font-medium text-gray-900">Tue</span>
+                                <span class="text-xs text-gray-600">1 task</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                                <span class="text-sm font-medium text-gray-900">Wed</span>
+                                <span class="text-xs text-gray-600">2 tasks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl shadow-sm p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Quick Notes</h4>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <p class="text-sm text-gray-700">Remember to finish the sponsorship prospectus that you have been delaying...</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline text-sm">About</a>
+                    <a href="https://github.com/slippyishappy/grub" class="text-gray-600 hover:text-gray-900 hover:underline text-sm">GitHub</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 hover:underline text-sm">Privacy</a>
+                </div>
+                <p class="text-sm text-gray-500">© 2024 FocusSpace. Built with focus and intention.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
